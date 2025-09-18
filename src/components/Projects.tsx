@@ -264,7 +264,7 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Interested in working together? Let's discuss your next project.
+            Interested in working together? Let&apos;s discuss your next project.
           </p>
           <a
             href="#contact"

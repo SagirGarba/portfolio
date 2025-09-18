@@ -17,7 +17,7 @@ const About = () => {
                 Who I Am
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a passionate Frontend Developer with extensive experience in
+                I&apos;m a passionate Frontend Developer with extensive experience in
                 the React ecosystem. I specialize in creating modern,
                 responsive, and user-friendly web applications that not only
                 look great but also solve real-world problems.
@@ -29,7 +29,7 @@ const About = () => {
                 My Unique Value
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I don't just code interfaces—I create solutions that solve real
+                I don&apos;t just code interfaces—I create solutions that solve real
                 problems. My approach combines technical expertise with a deep
                 understanding of user needs, resulting in applications that are
                 both functional and delightful to use.

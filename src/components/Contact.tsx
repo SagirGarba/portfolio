@@ -60,10 +60,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Let's Build Something Amazing Together
+            Let&apos;s Build Something Amazing Together
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I'm always interested in new opportunities and exciting projects.
+            I&apos;m always interested in new opportunities and exciting projects.
             Whether you have a question or just want to say hi, feel free to
             reach out!
           </p>
@@ -258,7 +258,7 @@ const Contact = () => {
             © 2025 Sagir Garba. Built with Next.js and Tailwind CSS.
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-            Let's create something amazing together!
+            Let&apos;s create something amazing together!
           </p>
         </div>
       </div>
