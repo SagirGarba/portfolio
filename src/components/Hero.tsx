@@ -25,7 +25,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
-              Frontend Developer specializing in modern JavaScript, TypeScript,
+              Frontend Engineer specializing in modern JavaScript, TypeScript,
               React, and Next.js. I create solutions that solve real problems
               and deliver exceptional user experiences.
             </p>
@@ -54,7 +54,7 @@ const Hero = () => {
                 <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-white shadow-lg">
                   <Image
                     src="/sagir2.jpg"
-                    alt="Sagir Garba - Frontend Developer"
+                    alt="Sagir Garba - Frontend Engineer"
                     width={288}
                     height={288}
                     className="w-full h-full object-cover"

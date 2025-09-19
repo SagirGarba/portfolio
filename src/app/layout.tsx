@@ -18,22 +18,30 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sagir Garba - Frontend Developer",
+  title: "Talk 2 Sagir",
   description:
-    "Frontend Developer specializing in React, Next.js, and modern JavaScript. Building problem-solving interfaces and solutions.",
+    "Frontend Engineer specializing in React, Next.js, and modern JavaScript. Building problem-solving interfaces and solutions.",
   keywords: [
-    "Frontend Developer",
+    "Frontend Engineer",
     "React",
     "Next.js",
     "JavaScript",
     "TypeScript",
-    "Portfolio",
+    "Sagir Garba",
   ],
   authors: [{ name: "Sagir Garba" }],
   openGraph: {
-    title: "Sagir Garba - Frontend Developer",
+    title: "Talk 2 Sagir",
     description: "Building problem-solving interfaces with React & Next.js",
     type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/laptop-code.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/laptop-code.svg",
+    apple: "/laptop-code.svg",
   },
 };
 
@@ -44,6 +52,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/laptop-code.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/laptop-code.svg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >

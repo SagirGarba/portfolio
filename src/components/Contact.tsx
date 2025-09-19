@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,28 +31,28 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: "📧",
+      icon: Mail,
       label: "Email",
-      value: "sagir.garba@email.com",
-      href: "mailto:sagir.garba@email.com",
+      value: "sagir.garba.isa@gmail.com",
+      href: "mailto:sagir.garba.isa@gmail.com",
     },
     {
-      icon: "💼",
+      icon: Linkedin,
       label: "LinkedIn",
       value: "linkedin.com/in/sagirgarba",
-      href: "https://linkedin.com/in/sagirgarba",
+      href: "https://www.linkedin.com/in/sagirgarba/",
     },
     {
-      icon: "🐙",
+      icon: Github,
       label: "GitHub",
-      value: "github.com/sagirgarba",
-      href: "https://github.com/sagirgarba",
+      value: "github.com/SagirGarba",
+      href: "https://github.com/SagirGarba",
     },
     {
-      icon: "📱",
+      icon: MessageCircle,
       label: "WhatsApp",
-      value: "+1 (555) 123-4567",
-      href: "https://wa.me/15551234567",
+      value: "+234 7032623101",
+      href: "https://wa.me/2347032623101",
     },
   ];
 
@@ -63,9 +64,9 @@ const Contact = () => {
             Let&apos;s Build Something Amazing Together
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I&apos;m always interested in new opportunities and exciting projects.
-            Whether you have a question or just want to say hi, feel free to
-            reach out!
+            I&apos;m always interested in new opportunities and exciting
+            projects. Whether you have a question or just want to say hi, feel
+            free to reach out!
           </p>
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
         </div>
@@ -84,71 +85,90 @@ const Contact = () => {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
+                  className="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 group hover:shadow-md"
                 >
-                  <div className="text-3xl mr-4 group-hover:scale-110 transition-transform">
-                    {info.icon}
+                  <div className="text-blue-600 mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <info.icon size={28} />
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-900 dark:text-white">
+                  <div className="flex-1">
+                    <p className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
                       {info.label}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       {info.value}
                     </p>
+                  </div>
+                  <div className="text-gray-400 group-hover:text-blue-600 transition-colors">
+                    →
                   </div>
                 </a>
               ))}
             </div>
 
             <div className="mt-12">
-              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
                 Why Work With Me?
               </h4>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="text-blue-600 mr-3 mt-1">✓</div>
+              <div className="space-y-6">
+                <div className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <div className="text-blue-600 mr-4 mt-1 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      ✓
+                    </div>
+                  </div>
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">
+                    <p className="font-medium text-gray-900 dark:text-white mb-1">
                       Problem-Solving Focus
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       I approach every project with analytical thinking and
                       creative solutions
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="text-blue-600 mr-3 mt-1">✓</div>
+                <div className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <div className="text-blue-600 mr-4 mt-1 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      ✓
+                    </div>
+                  </div>
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">
+                    <p className="font-medium text-gray-900 dark:text-white mb-1">
                       Modern Tech Stack
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       Proficient in React, Next.js, TypeScript, and modern
                       development practices
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="text-blue-600 mr-3 mt-1">✓</div>
+                <div className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <div className="text-blue-600 mr-4 mt-1 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      ✓
+                    </div>
+                  </div>
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">
+                    <p className="font-medium text-gray-900 dark:text-white mb-1">
                       Team Player
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       Excellent communication and collaboration skills for
                       seamless teamwork
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="text-blue-600 mr-3 mt-1">✓</div>
+                <div className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <div className="text-blue-600 mr-4 mt-1 flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      ✓
+                    </div>
+                  </div>
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">
+                    <p className="font-medium text-gray-900 dark:text-white mb-1">
                       Continuous Learning
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">
                       Always staying updated with the latest technologies and
                       best practices
                     </p>

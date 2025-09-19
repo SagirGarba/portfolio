@@ -45,7 +45,7 @@ const Skills = () => {
     {
       name: "Leadership",
       level: 80,
-      description: "Mentoring and guiding team members",
+      description: "Mentoring and guiding new team members",
     },
   ];
 
@@ -160,8 +160,6 @@ const Skills = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "HTML5",
-              "CSS3",
               "JavaScript",
               "TypeScript",
               "React",
@@ -169,9 +167,7 @@ const Skills = () => {
               "Redux",
               "Tailwind CSS",
               "Git",
-              "GitHub",
-              "VS Code",
-              "Figma",
+
               "REST APIs",
               "GraphQL",
               "Node.js",

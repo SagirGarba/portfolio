@@ -1,108 +1,49 @@
+import Image from "next/image";
+
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Donor Dashboard & Super Admin",
-      tagline: "Comprehensive management platform for donor relations",
+      title: "Super Admin 4 Convexity Humanitarian Aid System",
+      tagline:
+        "Enterprise-Grade Administrative Control Center for Social Impact Platform",
       description:
-        "Built a full-featured dashboard for managing donor relationships, including real-time analytics, donor tracking, and administrative controls. Features include data visualization, automated reporting, and secure user management.",
-      image: "/api/placeholder/600/400", // Placeholder for screenshot
+        "Developed a comprehensive super-admin dashboard for managing a complete social impact and donation platform, featuring multi-tenant project management, real-time financial analytics, user lifecycle management, and secure administrative controls. ",
+
+      image: "/SuparAdmin.png", // Super Admin Dashboard Screenshot
       technologies: [
         "React",
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Chart.js",
-        "Prisma",
+        "TanStack Query",
+        "Redux",
+        "RESTful APIs",
       ],
-      role: "Lead Frontend Developer - Built donor dashboard & super admin interface",
-      liveUrl: "#",
+      role: "Lead Frontend Engineer - Built donor dashboard & super admin interface",
+      liveUrl: "https://su.cchats.live/dashboard",
       githubUrl: "#",
       featured: true,
     },
     {
       id: 2,
-      title: "E-Commerce Platform",
-      tagline: "Modern shopping experience with advanced features",
+      title: "Donor Dashboard 4 Convexity Humanitarian Aid System",
+      tagline: "Comprehensive donor management platform for charitable giving",
       description:
-        "Developed a responsive e-commerce platform with product catalog, shopping cart, user authentication, and payment integration. Includes admin panel for inventory management and order processing.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe", "JWT"],
-      role: "Full-Stack Developer - End-to-end development and deployment",
-      liveUrl: "#",
+        "Developed a full-featured donor dashboard for managing charitable organizations (donees), their projects, and donation workflows. Includes detailed project listings with filtering, donee profiles with contact and location information, real-time project status tracking, and interactive donation actions. Features include advanced search functionality, responsive data tables, organization summaries, and seamless navigation between donor and project views.",
+      image: "/Donor.png", // Donor Dashboard Screenshot
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux",
+        "React Query", // Inferred from custom hooks like useGetDoneeProjects
+      ],
+      role: "Lead Front end Engineer - End-to-end development and deployment",
+      liveUrl: "#https://auth.cchats.live/",
       githubUrl: "#",
       featured: true,
-    },
-    {
-      id: 3,
-      title: "Task Management App",
-      tagline: "Collaborative project management tool",
-      description:
-        "Created a real-time task management application with team collaboration features, drag-and-drop functionality, and progress tracking. Includes notifications and file sharing capabilities.",
-      image: "/api/placeholder/600/400",
-      technologies: [
-        "React",
-        "Firebase",
-        "Material-UI",
-        "React DnD",
-        "Socket.io",
-      ],
-      role: "Frontend Developer - UI/UX design and implementation",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Weather Analytics Dashboard",
-      tagline: "Interactive weather data visualization",
-      description:
-        "Built a comprehensive weather dashboard with interactive maps, historical data analysis, and predictive modeling. Features real-time weather updates and customizable alerts.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Vue.js", "D3.js", "OpenWeather API", "Chart.js", "SCSS"],
-      role: "Frontend Developer - Data visualization and API integration",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      tagline: "Personal branding and project showcase",
-      description:
-        "Designed and developed a responsive portfolio website with modern animations, optimized performance, and SEO best practices. Includes blog functionality and contact forms.",
-      image: "/api/placeholder/600/400",
-      technologies: [
-        "Next.js",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Vercel",
-        "MDX",
-      ],
-      role: "Full-Stack Developer - Complete website development",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
-    },
-    {
-      id: 6,
-      title: "Social Media Analytics Tool",
-      tagline: "Comprehensive social media performance tracking",
-      description:
-        "Developed a dashboard for tracking social media engagement across multiple platforms. Includes automated reporting, competitor analysis, and growth recommendations.",
-      image: "/api/placeholder/600/400",
-      technologies: [
-        "React",
-        "Python",
-        "FastAPI",
-        "PostgreSQL",
-        "Plotly",
-        "Docker",
-      ],
-      role: "Frontend Developer - Dashboard design and data visualization",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false,
     },
   ];
 
@@ -125,7 +66,7 @@ const Projects = () => {
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
             Highlight Projects
           </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects
               .filter((project) => project.featured)
               .map((project) => (
@@ -133,11 +74,22 @@ const Projects = () => {
                   key={project.id}
                   className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="text-4xl mb-2">🚀</div>
-                      <p className="text-sm opacity-90">Project Screenshot</p>
-                    </div>
+                  <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center overflow-hidden">
+                    {project.image && !project.image.includes("placeholder") ? (
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} Screenshot`}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover"
+                        priority={project.id <= 2}
+                      />
+                    ) : (
+                      <div className="text-white text-center">
+                        <div className="text-4xl mb-2">🚀</div>
+                        <p className="text-sm opacity-90">Project Screenshot</p>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -175,18 +127,12 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    <div className="flex space-x-4">
+                    <div className="flex justify-center mt-6">
                       <a
                         href={project.liveUrl}
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors"
+                        className="bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-6 rounded-lg font-medium transition-colors"
                       >
                         Live Demo
-                      </a>
-                      <a
-                        href={project.githubUrl}
-                        className="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 text-center py-2 px-4 rounded-lg font-medium transition-colors"
-                      >
-                        GitHub
                       </a>
                     </div>
                   </div>
@@ -196,75 +142,12 @@ const Projects = () => {
         </div>
 
         {/* All Projects Grid */}
-        <div>
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
-            All Projects
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects
-              .filter((project) => !project.featured)
-              .map((project) => (
-                <div
-                  key={project.id}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <div className="h-32 bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="text-2xl mb-1">💻</div>
-                      <p className="text-xs opacity-90">Project Preview</p>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      {project.title}
-                    </h4>
-                    <p className="text-blue-600 text-sm font-medium mb-2">
-                      {project.tagline}
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-3">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <span
-                          key={tech}
-                          className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <span className="text-gray-500 text-xs">
-                          +{project.technologies.length - 3} more
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="flex space-x-2">
-                      <a
-                        href={project.liveUrl}
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-1.5 px-3 rounded text-sm font-medium transition-colors"
-                      >
-                        Demo
-                      </a>
-                      <a
-                        href={project.githubUrl}
-                        className="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 text-center py-1.5 px-3 rounded text-sm font-medium transition-colors"
-                      >
-                        Code
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Interested in working together? Let&apos;s discuss your next project.
+            Interested in working together? Let&apos;s discuss your next
+            project.
           </p>
           <a
             href="#contact"

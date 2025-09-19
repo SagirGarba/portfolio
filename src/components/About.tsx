@@ -17,10 +17,10 @@ const About = () => {
                 Who I Am
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I&apos;m a passionate Frontend Developer with extensive experience in
-                the React ecosystem. I specialize in creating modern,
-                responsive, and user-friendly web applications that not only
-                look great but also solve real-world problems.
+                I&apos;m a passionate Frontend Engineer with extensive
+                experience in the React ecosystem. I specialize in creating
+                modern, responsive, and user-friendly web applications that not
+                only look great but also solve real-world problems.
               </p>
             </div>
 
@@ -29,10 +29,10 @@ const About = () => {
                 My Unique Value
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I don&apos;t just code interfaces—I create solutions that solve real
-                problems. My approach combines technical expertise with a deep
-                understanding of user needs, resulting in applications that are
-                both functional and delightful to use.
+                I don&apos;t just code interfaces—I create solutions that solve
+                real problems. My approach combines technical expertise with a
+                deep understanding of user needs, resulting in applications that
+                are both functional and delightful to use.
               </p>
             </div>
 
@@ -60,12 +60,12 @@ const About = () => {
                   {
                     icon: "🤝",
                     title: "Teamwork",
-                    desc: "Collaborate effectively with cross-functional teams",
+                    desc: "Collaborate effectively with cross-functional teams including designers and backend developers",
                   },
                   {
                     icon: "💬",
                     title: "Communication",
-                    desc: "Clear and concise communication with stakeholders",
+                    desc: "Clear and concise communication with Team members and stakeholders",
                   },
                   {
                     icon: "⏰",
@@ -80,7 +80,7 @@ const About = () => {
                   {
                     icon: "🔧",
                     title: "Adaptability",
-                    desc: "Quick learner in fast-paced environments",
+                    desc: "Quick learner in fast-paced environments and able to pivot as needed",
                   },
                   {
                     icon: "🎨",

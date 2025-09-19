@@ -2,9 +2,9 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Senior Frontend Developer",
-      company: "TechCorp Solutions",
-      period: "2023 - Present",
+      title: "Senior Frontend Engineer",
+      company: "Neonwave",
+      period: "March, 2025 - Present",
       location: "Remote",
       description:
         "Leading frontend development for enterprise-level applications, mentoring junior developers, and collaborating with cross-functional teams.",
@@ -14,15 +14,15 @@ const Experience = () => {
         "Implemented CI/CD pipeline reducing deployment time by 60%",
         "Mentored 3 junior developers and conducted technical interviews",
       ],
-      technologies: ["React", "Next.js", "TypeScript", "AWS", "Docker"],
+      technologies: ["React", "Next.js", "TypeScript", "Redux", "RESTful APIs"],
       current: true,
     },
     {
       id: 2,
-      title: "Frontend Developer",
-      company: "InnovateLabs",
-      period: "2021 - 2023",
-      location: "New York, NY",
+      title: "Frontend Engineer",
+      company: "Zarttech",
+      period: "July 2024 - March 2025",
+      location: "Remote",
       description:
         "Developed responsive web applications and collaborated with backend teams to integrate RESTful APIs and GraphQL endpoints.",
       achievements: [
@@ -31,32 +31,49 @@ const Experience = () => {
         "Implemented responsive design patterns increasing mobile traffic by 25%",
         "Collaborated with UX team to improve user satisfaction scores by 20%",
       ],
-      technologies: ["React", "Vue.js", "JavaScript", "Node.js", "MongoDB"],
+      technologies: ["React", "Typescript", "JavaScript"],
       current: false,
     },
     {
       id: 3,
-      title: "Junior Frontend Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2021",
-      location: "San Francisco, CA",
+      title: "Junior Frontend Engineer",
+      company: "RahaPay",
+      period: "January 2024 - June 2024",
+      location: "Remote",
       description:
-        "Contributed to the development of customer-facing web applications and learned modern frontend development practices.",
+        "Contributed to the development of Fintech web applications and learned modern frontend development practices.",
       achievements: [
-        "Developed e-commerce platform handling $2M+ in annual transactions",
-        "Implemented payment integration with Stripe API",
+        "Developed Fintech platform handling 2M+ in annual transactions",
+
         "Created reusable component library adopted across 5+ projects",
         "Participated in agile development process and daily stand-ups",
       ],
-      technologies: ["JavaScript", "React", "CSS3", "HTML5", "Git"],
+      technologies: ["JavaScript", "React", "Tailwind", "Git"],
       current: false,
     },
     {
       id: 4,
+      title: "Technical Officer",
+      company: "Tati Technology",
+      period: "May 2021 - December 2023",
+      location: "Yola, Nigeria",
+      description:
+        "Managed and oversaw all technical operations, ensuring the company’s website remains fully functional and optimized",
+      achievements: [
+        "Built responsive landing pages for client campaigns",
+        "Learned version control with Git and collaborative development",
+        "Contributed to WordPress theme customization and plugin development",
+        "Gained experience with SEO optimization and web performance",
+      ],
+      technologies: ["HTML", "CSS", "JavaScript", "React"],
+      current: false,
+    },
+    {
+      id: 5,
       title: "Web Development Intern",
-      company: "Digital Agency Pro",
-      period: "2019 - 2020",
-      location: "Boston, MA",
+      company: "Bitpoint inc",
+      period: "January 2020 - April 2021",
+      location: "Yola, Nigeria",
       description:
         "Assisted in web development projects and gained hands-on experience with modern web technologies.",
       achievements: [
@@ -65,7 +82,7 @@ const Experience = () => {
         "Contributed to WordPress theme customization and plugin development",
         "Gained experience with SEO optimization and web performance",
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "WordPress", "PHP"],
+      technologies: ["HTML", "CSS", "JavaScript"],
       current: false,
     },
   ];
@@ -104,7 +121,7 @@ const Experience = () => {
                 <div
                   className={`w-full md:w-5/12 ${
                     index % 2 === 0
-                      ? "md:pr-8 md:text-right"
+                      ? "md:pr-8 md:text-left"
                       : "md:pl-8 md:text-left"
                   }`}
                 >
@@ -144,10 +161,24 @@ const Experience = () => {
                         {exp.achievements.map((achievement, i) => (
                           <li
                             key={i}
-                            className="text-sm text-gray-600 dark:text-gray-300 flex items-start"
+                            className={`text-sm text-gray-600 dark:text-gray-300 flex items-start ${
+                              index % 2 === 0
+                                ? "md:justify-start"
+                                : "md:justify-start"
+                            }`}
                           >
-                            <span className="text-blue-600 mr-2 mt-1">•</span>
-                            {achievement}
+                            <span className="text-blue-600 mr-2 mt-1 flex-shrink-0">
+                              •
+                            </span>
+                            <span
+                              className={`${
+                                index % 2 === 0
+                                  ? "md:text-left"
+                                  : "md:text-left"
+                              }`}
+                            >
+                              {achievement}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -160,7 +191,7 @@ const Experience = () => {
                       <div
                         className={`flex flex-wrap gap-2 ${
                           index % 2 === 0
-                            ? "md:justify-end"
+                            ? "md:justify-start"
                             : "md:justify-start"
                         }`}
                       >
@@ -199,19 +230,19 @@ const Experience = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">4+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
               <p className="text-gray-600 dark:text-gray-300">
                 Years of Experience
               </p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
               <p className="text-gray-600 dark:text-gray-300">
                 Projects Completed
               </p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
               <p className="text-gray-600 dark:text-gray-300">
                 Technologies Mastered
               </p>
